@@ -41,7 +41,7 @@ dependencies {
     compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.2")
 
     // Compile Minestom into project
-    compileOnly("com.github.Minestom", "Minestom", "7867313290")
+    compileOnly("com.github.Minestom", "Minestom", "af28caad9e")
     compileOnly("io.github.jglrxavpok.hephaistos", "common", "2.4.5")
 
     // import kotlinx serialization

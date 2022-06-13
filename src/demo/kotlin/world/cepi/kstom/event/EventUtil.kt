@@ -5,7 +5,6 @@ import net.minestom.server.event.EventListener
 import net.minestom.server.event.entity.EntityTickEvent
 import net.minestom.server.potion.PotionEffect
 import world.cepi.kstom.Manager
-import world.cepi.kstom.util.node
 
 const val extensionName = "TestExtension"
 
@@ -14,7 +13,7 @@ fun old() {
         it.entity.removeEffect(PotionEffect.ABSORPTION)
     }
 
-    MinecraftServer.getExtensionManager().getExtension(extensionName)?.node?.addListener(EntityTickEvent::class.java) {
+    MinecraftServer.getExtensionManager().getExtension(extensionName)?.eventNode?.addListener(EntityTickEvent::class.java) {
         it.entity.removeEffect(PotionEffect.ABSORPTION)
     }
 
@@ -33,7 +32,7 @@ fun new() {
         entity.removeEffect(PotionEffect.ABSORPTION)
     }
 
-    Manager.extension.getExtension(extensionName)?.node?.listenOnly<EntityTickEvent> {
+    Manager.extension.getExtension(extensionName)?.eventNode?.listenOnly<EntityTickEvent> {
         entity.removeEffect(PotionEffect.ABSORPTION)
     }
 
